@@ -21,9 +21,6 @@ Following libraries were used during the development of this:
 ### Running the server locally
 
 Requires Maven and Java8+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
 ```sh
 $ cd backend
 $ mvn clean install
