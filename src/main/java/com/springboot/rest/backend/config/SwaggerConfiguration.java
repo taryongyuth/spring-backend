@@ -32,18 +32,6 @@ public class SwaggerConfiguration {
                 .securitySchemes(Arrays.asList(apiKey()));
     }
 
-//    @Bean
-//    public Docket swaggerUserApi() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .groupName("User")
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.springboot.rest.backend.config"))
-//                .paths(PathSelectors.any())
-//                .build()
-//                .apiInfo(metaData())
-//                .securitySchemes(Arrays.asList(apiKey()));
-//    }
-
     private ApiKey apiKey() {
         return new ApiKey("Token", "Authorization", "header");
     }
