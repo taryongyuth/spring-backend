@@ -46,6 +46,35 @@ Some of the important api endpoints are as follows :
 Get Token (***Token will return inside HTTP Header response Field:"Authorization")
 - http://localhost:8080/api/auth (HTTP:POST)
 
+Example
+```
+curl -v --location --request POST 'http://localhost:8080/api/auth?username=user&password=password'
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+> POST /api/auth?username=user&password=password HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.64.1
+> Accept: */*
+> 
+< HTTP/1.1 200 
+< Vary: Origin
+< Vary: Access-Control-Request-Method
+< Vary: Access-Control-Request-Headers
+< Authorization: Bearer eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNTk5NDY3NDIxLCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.z3x-6PzwUvkXuibY16k7iwAmgqReFjF2WnaXvF8MpILDUBsj0gkDaNdJ5LC6xQ7HSAl73yK-YlOHfauwykxUSg
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 1; mode=block
+< Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+< Pragma: no-cache
+< Expires: 0
+< X-Frame-Options: DENY
+< Content-Length: 0
+< Date: Fri, 28 Aug 2020 08:30:21 GMT
+< 
+* Connection #0 to host localhost left intact
+* Closing connection 0
+```
+
 Access to resource endpoints
 - http://localhost:8080/api/v1/employees (HTTP:GET)
 - http://localhost:8080/api/v1/employees (HTTP:POST)
