@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-rest-backend
+    version: 0.0.1
+  profiles.active: local
+
+  jackson:
+    property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+
+---
+spring:
+  profiles: local
+
+  datasource:
+    url: jdbc:h2:mem:employeedb
+    driverClassName: org.h2.Driver
+    username: username
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
